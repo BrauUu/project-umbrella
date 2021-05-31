@@ -1,0 +1,18 @@
+<model-navigation>
+    <div class="row">
+        <div *ngFor="let item of umbrellaList; let i=index;" class="card mx-1" style="width: 18rem;">
+            <img src="../../assets/multiUmbrellas.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ item?.model }}</h5>
+                <div class="card-text">Marca: {{ item?.brand }}</div>
+                <div class="card-text">Coloração: {{ item?.colors }}</div>
+                <div class="card-text">Altura: {{ item?.height }}</div>
+                <div class="card-text">Tamanho: {{ item?.size }}</div>
+                <div class="my-2">
+                    <img style="cursor: pointer;" src="../../assets/edit.svg" class="iconsvg float-start" (click)="editarItem(item?._id,i)">
+                    <img style="cursor: pointer;"   src="../../assets/remove.svg" class="iconsvg float-end" (click)="deleteUmbrella(item?._id,i)">
+                </div>
+            </div>
+        </div>
+    </div>
+</model-navigation>

@@ -1,0 +1,30 @@
+<div class="d-md-none bg-dark p-2">        
+    <div class="row">
+        <div class="p-2 col-10">
+            <img src="/assets/icon2.png" class="ml-3" style="width: 40px;">
+        </div>
+        <div class="p-1 ml-auto mr-3 col-2" (click)="openCloseMenu()">
+            <img src="../../assets/menu-2.png" class=" menu-icon" alt="icon">
+        </div>        
+    </div>    
+</div>
+<div class="d-md-none text-white" *ngIf="menuOpen" style="background-color: #222;">
+    <div [routerLink]="'/'" class="p-2 border-bottom border-dark">Ver Catalogo</div>
+    <div [routerLink]="'/create'" class="p-2 border-bottom border-dark">Cadastrar novo modelo</div>
+    <div [routerLink]="'/showdb'" class="p-2 border-bottom border-dark">Ver DB</div>
+</div>
+
+
+<div class="h-100 position-fixed text-white d-none d-md-block d-lg-block umbrella-navbar">
+    <div class="row my-3 justify-content-center align-items-center">
+        <img src="/assets/icon2.png" style="width: 70px; cursor:pointer;" alt="" [routerLink]="'/'">
+    </div>
+    <div class="card-header bg-dark text-center">
+        UMBRELLA CORP
+    </div>
+    <ul style="cursor:pointer;" class="list-group list-group-flush">
+        <li [routerLink]="'/'" class="list-group-item text-white bg-transparent">Ver Catalogo</li>
+        <li [routerLink]="'/create'" class="list-group-item text-white bg-transparent">Cadastrar novo modelo</li>
+        <li [routerLink]="'/showdb'" class="list-group-item text-white bg-transparent">Ver DB</li>
+    </ul>
+</div>
